@@ -5,6 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: 'Constantin Metz Portfolio',
+    // siteUrl: `https://www.example.com`,
   },
   plugins: [
     {
@@ -20,7 +21,7 @@ module.exports = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sitemap',
+    // 'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-manifest',
