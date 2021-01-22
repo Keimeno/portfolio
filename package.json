@@ -21,6 +21,7 @@
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.9.0",
     "gatsby-link": "^2.9.0",
+    "gatsby-plugin-contentful-optional-fields": "^2.2.0",
     "gatsby-plugin-manifest": "^2.10.0",
     "gatsby-plugin-offline": "^3.8.0",
     "gatsby-plugin-pnpm": "^1.2.5",
@@ -41,5 +42,8 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/react-helmet": "^6.1.0"
   }
 }

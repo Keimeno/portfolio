@@ -5,6 +5,7 @@ dependencies:
   gatsby: 2.30.2_react-dom@16.14.0+react@16.14.0
   gatsby-image: 2.9.0
   gatsby-link: 2.9.0_832005e77e970d80ad4bd3eb87f2200a
+  gatsby-plugin-contentful-optional-fields: 2.2.0
   gatsby-plugin-manifest: 2.10.0_gatsby@2.30.2
   gatsby-plugin-offline: 3.8.0_gatsby@2.30.2
   gatsby-plugin-pnpm: 1.2.5_gatsby@2.30.2
@@ -25,6 +26,8 @@ dependencies:
   react-dom: 16.14.0_react@16.14.0
   react-helmet: 6.1.0_react@16.14.0
   tailwindcss: 2.0.2_54964301c3904a9d7f7f75784e25f0a3
+devDependencies:
+  '@types/react-helmet': 6.1.0
 lockfileVersion: 5.2
 packages:
   /@ardatan/aggregate-error/0.0.6:
@@ -2068,7 +2071,6 @@ packages:
     resolution:
       integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
   /@types/prop-types/15.7.3:
-    dev: false
     resolution:
       integrity: sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
   /@types/q/1.5.4:
@@ -2082,11 +2084,16 @@ packages:
     dev: false
     resolution:
       integrity: sha512-RHYataCUPQnt+GHoASyRLq6wmZ0n8jWlBW8Lxcwd30NN6vQfbmTeoSDfkgxO0S1lEzArp8OFDsq5KIs7FygjtA==
+  /@types/react-helmet/6.1.0:
+    dependencies:
+      '@types/react': 17.0.0
+    dev: true
+    resolution:
+      integrity: sha512-PYRoU1XJFOzQ3BHvWL1T8iDNbRjdMDJMT5hFmZKGbsq09kbSqJy61uwEpTrbTNWDopVphUT34zUSVLK9pjsgYQ==
   /@types/react/17.0.0:
     dependencies:
       '@types/prop-types': 15.7.3
       csstype: 3.0.6
-    dev: false
     resolution:
       integrity: sha512-aj/L7RIMsRlWML3YB6KZiXB3fV2t41+5RBGYF8z+tAKU43Px8C3cYUZsDvf1/+Bm4FK21QWBrDutu8ZJ/70qOw==
   /@types/readable-stream/2.3.9:
@@ -4716,7 +4723,6 @@ packages:
     resolution:
       integrity: sha512-wvlcdIbf6pwKEk7vHj8/Bkc0B4ylXZruLvOgs9doS5eOsOpuodOV2zJChSpkp+pRpYQLQMeF04nr3Z68Sta9jA==
   /csstype/3.0.6:
-    dev: false
     resolution:
       integrity: sha512-+ZAmfyWMT7TiIlzdqJgjMb7S4f1beorDbWbsocyK4RaiqA5RTX3K14bnBWmmA9QEM0gRdsjyyrEmcyga8Zsxmw==
   /currently-unhandled/0.4.1:
@@ -6838,6 +6844,10 @@ packages:
       node: '>=10.13.0'
     resolution:
       integrity: sha512-3tts3ItXERhA9rDtiCw/Xdni+ALqC7EWUPd4Yg8JsfRAifGE078Ai2x52rO+7r7u0KzaO8PnOKUsOVFlkWVmSw==
+  /gatsby-plugin-contentful-optional-fields/2.2.0:
+    dev: false
+    resolution:
+      integrity: sha512-LCZbLZkeLDAnY3jupDrDsSyWMmouZHWZcVgMMy6DoL74gahchIB1iziTiUArTgqv6FmlkDBRSYq87OqQBE0QeA==
   /gatsby-plugin-manifest/2.10.0_gatsby@2.30.2:
     dependencies:
       '@babel/runtime': 7.12.5
@@ -16053,11 +16063,13 @@ packages:
       integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==
 specifiers:
   '@reach/router': ^1.3.4
+  '@types/react-helmet': ^6.1.0
   autoprefixer: ^10.2.1
   dotenv: ^8.2.0
   gatsby: ^2.26.1
   gatsby-image: ^2.9.0
   gatsby-link: ^2.9.0
+  gatsby-plugin-contentful-optional-fields: ^2.2.0
   gatsby-plugin-manifest: ^2.10.0
   gatsby-plugin-offline: ^3.8.0
   gatsby-plugin-pnpm: ^1.2.5

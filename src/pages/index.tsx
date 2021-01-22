@@ -1,12 +1,49 @@
 import React from 'react';
+import { graphql } from 'gatsby';
+import { IndexPageIndexable } from '../models/indexable';
+import Paper from '../components/paper/paper';
+import Layout from '../components/layout';
 
-const IndexPage = () => {
+export interface IndexPageProps {
+  data: {
+    allContentfulIndexable: { edges: { node: IndexPageIndexable }[] };
+  };
+}
+
+const IndexPage = ({
+  data: {
+    allContentfulIndexable: { edges },
+  },
+}: IndexPageProps) => {
   return (
-    <main>
-      <h1 className="border-2 border-yellow-600">Home Page</h1>
-      <h2>Home Page</h2>
-    </main>
+    <Layout>
+      <section className="papers">
+        {edges.map((edge, i) => (
+          <Paper paper={edge.node} key={`paper-${i}`} />
+        ))}
+      </section>
+    </Layout>
   );
 };
 
 export default IndexPage;
+
+export const query = graphql`
+  query indexableCollectionQuery {
+    allContentfulIndexable {
+      edges {
+        node {
+          slug
+          title
+          type
+          preview {
+            file {
+              url
+            }
+            title
+          }
+        }
+      }
+    }
+  }
+`;

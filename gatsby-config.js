@@ -15,6 +15,14 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
       },
     },
+    {
+      resolve: 'gatsby-plugin-contentful-optional-fields',
+      options: {
+        ContentfulIndexable: {
+          preview: 'Node',
+        },
+      },
+    },
     'gatsby-plugin-typescript',
     'gatsby-plugin-react-css-modules',
     'gatsby-plugin-pnpm',
